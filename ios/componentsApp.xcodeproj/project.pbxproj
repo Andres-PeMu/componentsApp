@@ -44,6 +44,7 @@
 		5B7EB9410499542E8C5724F5 /* Pods-componentsApp-componentsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-componentsApp-componentsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-componentsApp-componentsAppTests/Pods-componentsApp-componentsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-componentsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-componentsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = componentsApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83A6A7CF2CFFC6F2007EB56E /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-componentsApp-componentsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-componentsApp-componentsAppTests.release.xcconfig"; path = "Target Support Files/Pods-componentsApp-componentsAppTests/Pods-componentsApp-componentsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -116,9 +117,18 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		83A6A7CE2CFFC6AC007EB56E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83A6A7CF2CFFC6F2007EB56E /* Ionicons.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				83A6A7CE2CFFC6AC007EB56E /* Fonts */,
 				13B07FAE1A68108700A75B9A /* componentsApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* componentsAppTests */,
