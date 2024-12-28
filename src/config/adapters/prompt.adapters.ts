@@ -2,29 +2,37 @@ import prompt from 'react-native-prompt-android';
 
 
 interface Options {
-
+  title: string;
+  subtitle?: string;
+  buttons: PrompButton[];
+  prompType?: 'plain-text' | 'secure-text';
+  placeholder?: string;
+  defaultValue?: string;
 }
 
-export const showPrompt = ({ }: Options): void => {
+interface PrompButton {
+  text: string;
+  onPress: () => void;
+  style?: 'default' | 'cancel' | 'destructive';
+}
+
+export const showPrompt = ({
+  title,
+  subtitle,
+  buttons,
+  prompType = 'plain-text',
+  placeholder,
+  defaultValue,
+}: Options): void => {
   prompt(
-    'Enter password',
-    'Enter your password to claim your $1.5B in lottery winnings',
-    [
-      {
-        text: 'Cancel',
-        onPress: () => console.log('Cancel Pressed'),
-        style: 'cancel',
-      },
-      {
-        text: 'OK',
-        onPress: password => console.log('OK Pressed, password: ' + password),
-      },
-    ],
+    title,
+    subtitle,
+    buttons,
     {
-      type: 'secure-text',
+      type: prompType,
       cancelable: false,
-      defaultValue: 'test',
-      placeholder: 'placeholder',
+      defaultValue: defaultValue,
+      placeholder: placeholder,
     },
   );
 };
