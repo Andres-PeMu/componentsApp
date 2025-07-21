@@ -1,48 +1,53 @@
 import React from 'react';
-import {Pressable, StyleProp, Text, ViewProps} from 'react-native';
-import {colors, globalStyles} from '../../../config/theme/theme';
+import {Pressable, StyleProp, StyleSheet, Text, ViewStyle} from 'react-native';
+import {colors} from '../../../config/theme/theme';
 
 interface Props {
   text: string;
   disabled?: boolean;
-  style?: StyleProp<ViewProps>;
+  style?: StyleProp<ViewStyle>;
   color?: string;
   backgroundColor?: string;
   borderRadius?: number;
   paddingHorizontal?: number;
   paddingVertical?: number;
-  children?: React.ReactNode;
-  loading?: boolean;
-  icon?: React.ReactNode;
-  iconSize?: number;
-  iconColor?: string;
-  loadingSize?: number;
-  loadingColor?: string;
-
   onPress: () => void;
 }
 
-export const Button = ({text, style, onPress}: Props) => {
+export const Button = ({
+  text,
+  style,
+  onPress,
+  disabled = false,
+  color = colors.buttonTextColor,
+  backgroundColor = colors.primary,
+  borderRadius = 10,
+  paddingHorizontal = 20,
+  paddingVertical = 10,
+}: Props) => {
   return (
     <Pressable
       onPress={onPress}
+      disabled={disabled}
       style={({pressed}) => [
-        globalStyles.btnPrimary,
-        {
-          opacity: pressed ? 0.8 : 1,
-          backgroundColor: colors.primary,
-        },
+        styles.button,
+        {backgroundColor: disabled ? colors.text : backgroundColor},
+        {opacity: pressed ? 0.8 : 1},
+        {borderRadius, paddingHorizontal, paddingVertical},
+        style,
       ]}>
-      <Text
-        style={[
-          globalStyles.btnPrimaryText,
-          {
-            color: colors.buttonTextColor,
-          },
-          style,
-        ]}>
-        {text}
-      </Text>
+      <Text style={[styles.text, {color}]}>{text}</Text>
     </Pressable>
   );
 };
+
+const styles = StyleSheet.create({
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});

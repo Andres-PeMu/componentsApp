@@ -88,7 +88,7 @@ export default class HomeScreen extends Component {
               />
             ))}
             <View style={{marginTop: 30}} />
-            {menuItems.map((item, index) => (
+            {uiMenuItems.map((item, index) => (
               <MenuItem
                 isFirst={index === 0}
                 isLast={index === menuItems.length - 1}
@@ -97,7 +97,7 @@ export default class HomeScreen extends Component {
               />
             ))}
             <View style={{marginTop: 30}} />
-            {uiMenuItems.map((item, index) => (
+            {menuItems.map((item, index) => (
               <MenuItem
                 isFirst={index === 0}
                 isLast={index === menuItems.length - 1}
