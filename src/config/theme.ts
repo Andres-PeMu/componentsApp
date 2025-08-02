@@ -1,40 +1,40 @@
 import { MD3LightTheme, MD3DarkTheme, MD3Theme } from 'react-native-paper';
 
-// Tema claro personalizado
+// Tema claro personalizado - Colores de Casa de Reinas
 export const lightTheme: MD3Theme = {
   ...MD3LightTheme,
   colors: {
     ...MD3LightTheme.colors,
-    primary: '#007AFF',
-    secondary: '#5856D6',
-    tertiary: '#FF2D92',
-    surface: '#FFFFFF',
-    background: '#F2F2F7',
-    error: '#FF3B30',
+    primary: '#334155', // Color principal más oscuro
+    secondary: '#4f46e5', // Color secundario de la web
+    tertiary: '#22d3ee', // Color terciario (skyBlue)
+    surface: '#1e293b', // Superficie más oscura
+    background: '#111827', // Fondo más oscuro
+    error: '#f44336',
     onPrimary: '#FFFFFF',
     onSecondary: '#FFFFFF',
-    onSurface: '#000000',
-    onBackground: '#000000',
+    onSurface: '#f8fafc', // Texto más claro
+    onBackground: '#f8fafc',
     onError: '#FFFFFF',
   },
   roundness: 8,
 };
 
-// Tema oscuro personalizado
+// Tema oscuro personalizado - Colores de Casa de Reinas
 export const darkTheme: MD3Theme = {
   ...MD3DarkTheme,
   colors: {
     ...MD3DarkTheme.colors,
-    primary: '#0A84FF',
-    secondary: '#5E5CE6',
-    tertiary: '#FF375F',
-    surface: '#1C1C1E',
-    background: '#000000',
-    error: '#FF453A',
+    primary: '#334155', // Color principal oscuro de la web
+    secondary: '#4f46e5', // Color secundario (mantiene el mismo)
+    tertiary: '#22d3ee', // Color terciario (skyBlue)
+    surface: '#1e293b', // Color de superficie oscuro de la web
+    background: '#111827', // Color de fondo oscuro de la web
+    error: '#f44336',
     onPrimary: '#FFFFFF',
     onSecondary: '#FFFFFF',
-    onSurface: '#FFFFFF',
-    onBackground: '#FFFFFF',
+    onSurface: '#f8fafc', // Texto más claro
+    onBackground: '#f8fafc',
     onError: '#FFFFFF',
   },
   roundness: 8,

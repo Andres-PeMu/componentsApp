@@ -1,19 +1,16 @@
-import React, {Component} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {Navigator} from './presentation/navigator/navigator';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {PaperProvider} from './config/PaperProvider';
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { PaperProvider } from './config/PaperProvider';
+import { LoginScreen } from './presentation/screens/LoginScreen';
+import { NotificationBanner } from './components/NotificationBanner';
 
-export default class App extends Component {
-  render() {
-    return (
-      <SafeAreaProvider>
-        <PaperProvider>
-          <NavigationContainer>
-            <Navigator />
-          </NavigationContainer>
-        </PaperProvider>
-      </SafeAreaProvider>
-    );
-  }
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <PaperProvider>
+        <LoginScreen />
+        <NotificationBanner />
+      </PaperProvider>
+    </SafeAreaProvider>
+  );
 }
