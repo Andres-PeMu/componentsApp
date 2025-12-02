@@ -1,4 +1,4 @@
-// Exportar todos los stores
+// Exportar todos los stores directamente
 export { useAuthStore } from './authStore';
 export { useUIStore } from './uiStore';
 export { useAppStore } from './appStore';
